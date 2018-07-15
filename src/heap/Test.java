@@ -41,7 +41,7 @@ public class Test {
 		heap.create();
 		System.out.println("排序后：");
 		for(int i=0; i<total; i++) {
-			System.out.println(heap.getTop());
+			System.out.print(heap.getTop()+" ");
 		}
 		
 	}

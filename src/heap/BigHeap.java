@@ -48,7 +48,13 @@ public class BigHeap {
 	//在父亲和左儿子，右儿子三者之中找出最大值的位置
 	private int findMaxLocation(int i) {
 		
-		//默认假设i位置已经最大
+		return i*2 <= heapSize && heap[i*2] > heap[i]
+				?i*2
+				:i*2+1 <= heapSize && heap[i*2+1] > heap[i*2+1]
+						?i*2 + 1
+						:i;
+						
+	/*	//默认假设i位置已经最大
 		int maxLocation = i;
 		//若左儿子大，那么改变最大的位置，否则就不变
 		if (i*2 <= heapSize && heap[i*2] > heap[maxLocation]) {
@@ -59,7 +65,7 @@ public class BigHeap {
 			maxLocation = i*2 + 1;
 		}
 		
-		return maxLocation;
+		return maxLocation;*/
 	
 	}
 	
